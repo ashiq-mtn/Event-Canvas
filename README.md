@@ -1,6 +1,6 @@
 # Event Canvas
 
-Event Canvas is a web application designed to streamline event management for engineering students and educational institutions. It provides features such as user registration/login, event browsing, event details, event registration, certificate downloads, and event creation and management for administrators and event organizers.
+Event Canvas is a static web application designed to streamline event management for engineering students and educational institutions. It provides features such as user registration/login, event browsing, event details, event registration, certificate downloads, and event creation and management for administrators and event organizers.
 
 ## Features
 
@@ -13,7 +13,7 @@ Event Canvas is a web application designed to streamline event management for en
 
 ## Technologies Used
 
-- **Backend**: Node.js, Firebase
+- **Backend**: Firebase
 - **Frontend**: HTML, CSS, JavaScript
 
 ## Installation
@@ -23,20 +23,12 @@ Event Canvas is a web application designed to streamline event management for en
     git clone https://github.com/your-username/Event-Canvas.git
     cd Event-Canvas
     ```
-
-2. **Install the dependencies**
-    ```bash
-    npm install
-    ```
-
-3. **Configure Firebase**
+2. **Configure Firebase**
     - Set up a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
-    - Add your Firebase configuration to `src/firebaseConfig.js`.
-
-4. **Run the application**
-    ```bash
-    npm start
-    ```
+    - Add your Firebase configuration to `JS/firebase.js`.
+      
+3. **Open the application**
+    - Open `index.html` in your web browser to view the application.
 
 ## Usage
 
@@ -68,10 +60,9 @@ Contributions are welcome! Please fork the repository and create a pull request 
     ```
 6. **Create a pull request**
 
-
 ## Contact
 
-For any questions or suggestions, feel free to open an issue or contact [your-email@example.com].
+For any questions or suggestions, feel free to open an issue or contact [ashiquemuhammed2003@gmail.com].
 
 ---
 
