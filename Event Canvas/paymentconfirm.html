@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmed</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Your registration has been completed successfully.</p>
+        <div id="countdown">Redirecting</div>
+    </div>
+
+    <script>
+        var timeleft = 5;
+        var downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+                clearInterval(downloadTimer);
+            } else {
+                document.getElementById("countdown").innerHTML = "Redirecting in " + timeleft + " seconds...";
+            }
+            timeleft -= 1;
+        }, 1000);
+        // Redirect after 5 seconds
+        setTimeout(function () {
+            window.location.href = "index.html"; 
+        }, 5000);
+    </script>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        text-align: center;
+        padding: 200px;
+        border-radius: 8px;
+        margin-bottom: 500px;
+    }
+
+    h1 {
+        color: #6a64f1;
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+
+    p {
+        color: #536387;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #countdown {
+        font-size: 20px;
+        font-weight: light;
+        color: #000000;
+    }
+</style>
+
+</html>

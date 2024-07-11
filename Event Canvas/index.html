@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Canvas</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/homepageloader.css">
+</head>
+
+<body id="landingPage">
+
+    <!-- Loading animation -->
+    <div id="loadingAnimation">
+        <div class="boxes">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="displayHomePage" style="display: none;">
+        <!-- Header Section -->
+        <header class="header" id="navigationPanel">
+            <div class="hdcontainer">
+                <div class="logo">
+                    <p><strong>EVENT CANVAS</strong></p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="MyCreatedEvents.html" id="myevents">MY EVENTS</a></li>
+                        <li><a href="Events/internship.html">INTERNSHIPS</a></li>
+                        <li><a href="Events/collegeFest.html">FEST</a></li>
+                        <li><a href="Events/workshop.html">WORKSHOP</a></li>
+                        <li><a href="myRegisteredEvents.html" id="certificateLink" style="display: none;">CERTIFICATE</a></li>
+                    </ul>
+                    <div class="buttongrp">
+                        <button class="loginbtn" id="loginbtn" onclick="location.href='Login/login.html';">LOGIN</button>
+                        <button class="eventbtn" id="eventbutton" onclick="location.href='createNewEvent.html';" style="display: none;">CREATE EVENT</button>
+                        <div class="dropdown" id="profileDropdown" style="display: none;">
+                            <img src="Images/manprofile.png" alt="Account image" id="profilePic" onclick="toggleDropdown()">
+                            <div class="dropdown-content" id="dropdownContent" style="display: none;">
+                                <a href="#" id="signOutButton">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <div class="container">
+                <h1>Welcome to the Event Canvas</h1>
+                <p>Discover, Register, and Participate in Exciting Events</p>
+                <!-- Search bar -->
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Search for Events" onkeyup="searchResults()">
+                        <button type="submit" class="searchButton"> <i class="fa fa-search"></i> </button>
+                    </div>
+                </form>
+                <!-- Search results section -->
+                <div class="search-results" id="searchResults">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sample Event Cards Section -->
+        <section id="events-section" class="event-cards">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="row" id="upcoming-events-container">
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Categories Section -->
+        <section id="events-categories" class="event-categories">
+            <div class="container">
+                <h2>Event Categories</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card category-card" onclick="location.href='Events/workshop.html';">
+                            <img src="Images/iStock-1397047877-pcb-constraints-1365x731.jpg" class="card-img-top"
+                                alt="Category 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Workshop</h5>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                                <a href="#" class="eventcategories.html"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card" onclick="location.href='Events/internship.html';">
+                            <img src="Images/shutterstock_272975228.jpg" class="card-img-top" alt="Category 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Internship</h5>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card" onclick="location.href='Events/hackathon.html';">
+                            <img src="Images/full.webp" class="card-img-top" alt="Category 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Hackathon</h5>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card" onclick="location.href='Events/conference.html';">
+                            <img src="Images/conference.avif" class="card-img-top" alt="Category 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Conference</h5>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card" onclick="location.href='Events/collegeFest.html';">
+                            <img src="Images/festival.avif" class="card-img-top" alt="Category 2">
+                            <div class="card-body">
+                                <h5 class="card-title">College Fest</h5>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card" onclick="location.href='Events/sportsTournament.html';">
+                            <img src="Images/sports.jpg" class="card-img-top" alt="Category 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Sports Tournaments</h5>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-us">
+                            <h4>About Us</h4>
+                            <p>Event Canvas will serve as an Event Management System (EMS) tailored specifically for
+                                engineering students in Kerala. The platform aims to streamline event discovery,
+                                registration, participation, and certificate downloads for students, while providing
+                                event
+                                creation and management tools for colleges and organizations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="internship.html">Internships</a></li>
+                                <li><a href="collegeFest.html">College Fests</a></li>
+                                <li><a href="work-shop.html">Workshop</a></li>
+                                <li><a href="myRegisteredEvents.html">Certificate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="JS/navbar.js"></script>
+    <script type="module" src="JS/loadAnimation.js"></script>
+    <script type="module" src="JS/upcomingEvents.js"></script>
+    <script src="JS/scrollAndDropdown.js"></script>
+    
+    <script type="module" src="JS/searchbar.js"></script>
+    <!-- Your JavaScript code -->
+    <script type="module">
+        // Import the displaySearchResults function
+        import { displaySearchResults } from './JS/searchbar.js';
+
+        // Function to be executed after the DOM has loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.querySelector('.searchTerm');
+
+            // Add event listener for keyup event
+            searchInput.addEventListener('keyup', () => {
+                // Call the searchResults function when a key is pressed
+                searchResults();
+            });
+
+            // Define the searchResults function
+            function searchResults() {
+                const searchTerm = searchInput.value.trim();
+                console.log("Search Terms:", searchTerm);
+                const searchBox = document.querySelector('.search-results');
+
+                if (searchTerm !== '') {
+                    searchBox.style.display = 'block';
+                    // Call displaySearchResults with the searchTerm
+                    displaySearchResults(searchTerm);
+                } else {
+                    searchBox.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

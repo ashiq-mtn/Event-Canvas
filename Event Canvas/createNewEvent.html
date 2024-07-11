@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/createEventStyle.css">
+</head>
+
+<body id="createEventPage">
+
+    <!-- Header Section -->
+    <header class="header" id="navigationPanel">
+        <div class="hdcontainer">
+            <div class="logo">
+                <p><strong>EVENT CANVAS</strong></p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">EVENTS</a></li>
+                    <li><a href="Events/internship.html">INTERNSHIPS</a></li>
+                    <li><a href="Events/collegeFest.html">FEST</a></li>
+                    <li><a href="Events/workshop.html">WORKSHOP</a></li>
+                    <li><a href="certificates.html" id="certificateLink" style="display: none;">CERTIFICATE</a></li>
+                </ul>
+                <div class="buttongrp">
+                    <button class="loginbtn" id="loginbtn" onclick="location.href='Login/login.html';">LOGIN</button>
+                    <button class="eventbtn" id="eventbutton" onclick="location.href='createNewEvent.html';"
+                        style="display: none;">CREATE EVENT</button>
+                    <div class="dropdown" id="profileDropdown" style="display: none;">
+                        <img src="Images/manprofile.png" alt="Account image" id="profilePic" onclick="toggleDropdown()">
+                        <div class="dropdown-content" id="dropdownContent" style="display: none;">
+                            <a href="#" id="signOutButton">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add some space here -->
+    <div class="spacer"></div>
+
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <form id="createEventForm">
+                <div class="formbold-steps">
+                    <ul>
+                        <li class="formbold-step-menu1 active">
+                            <span>1</span>
+                            Event Details
+                        </li>
+                        <li class="formbold-step-menu2">
+                            <span>2</span>
+                            Event Overview
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="formbold-form-step-1 active">
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="eventTitle" class="formbold-form-label"> Event Title </label>
+                        <input type="text" name="eventTitle" id="eventTitle" placeholder="What's your event title"
+                            class="formbold-form-input" required />
+                    </div>
+
+                    <div>
+                        <label for="briefDesc" class="formbold-form-label"> Brief Description </label>
+                        <textarea rows="6" name="eventTitle" id="briefDesc"
+                            placeholder="Tell the students about the event" class="formbold-form-input"
+                            required></textarea>
+                    </div>
+
+                    <!-- Event Category -->
+                    <div class="form-group" id="eventcategory">
+                        <div>
+                            <label for="eventCategories" class="formbold-form-label"> Event Category</label>
+                            <select id="eventCategories" name="eventCategories" required class="formbold-form-input"
+                                required>
+                                <option value="workshop" selected>Workshop</option>
+                                <option value="internship">Internship</option>
+                                <option value="hackathon">Hackathon</option>
+                                <option value="conference">Conference</option>
+                                <option value="collegeFest">College Fest</option>
+                                <option value="sportsTournament">Sports Tournaments</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Event Type -->
+                    <div class="form-group" id="eventtype">
+                        <div>
+                            <label for="eventType" class="formbold-form-label"> Event Type</label>
+                            <select id="eventType" name="eventType" required class="formbold-form-input" required>
+                                <option value="Offline Mode" selected>Offline Mode</option>
+                                <option value="Online Mode">Online Mode</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Event Thumbnail -->
+                    <div class="form-group">
+                        <label for="eventThumbnail" class="formbold-form-label">Event Thumbnail:</label>
+                        <div class="custum-file-upload">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
+                                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill=""
+                                            d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
+                                            clip-rule="evenodd" fill-rule="evenodd"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <span>Click to upload image</span>
+                            </div>
+                            <input type="file" id="eventThumbnail" name="eventThumbnail" accept="image/*"
+                                onchange="previewImage(event)">
+
+                        </div>
+                        <div id="thumbnailContainer" class="thumbnail-container" style="display: none;">
+                            <img id="thumbnailPreview" src="" alt="Thumbnail Preview">
+                            <button id="removeThumbnailBtn" onclick="removeThumbnail(event)">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="startDate" class="formbold-form-label"> Start Date </label>
+                            <input type="date" name="startDate" id="startDate" class="formbold-form-input" required />
+                        </div>
+                        <div>
+                            <label for="endDate" class="formbold-form-label"> End Date </label>
+                            <input type="date" name="endDate" id="endDate" class="formbold-form-input" required />
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="startTime" class="formbold-form-label"> Start Time </label>
+                            <input type="time" name="startTime" id="startTime" class="formbold-form-input" required />
+                        </div>
+                        <div>
+                            <label for="endTime" class="formbold-form-label"> End Time </label>
+                            <input type="time" name="endTime" id="endTime" class="formbold-form-input" required />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="lastDate" class="formbold-form-label"> Last Date For Registration </label>
+                        <input type="date" name="lastDate" id="lastDate" class="formbold-form-input" required />
+                    </div>
+
+                </div>
+
+                <div class="formbold-form-step-2">
+                    <div>
+                        <label for="detailedDescription" class="formbold-form-label"> Detailed Description </label>
+                        <textarea rows="6" name="detailedDescription" id="detailedDescription"
+                            placeholder="Enter the detailed description of the event here..."
+                            class="formbold-form-input" required></textarea>
+                    </div>
+
+                    <!-- Department select -->
+                    <div class="form-group" id="department">
+                        <label class="formbold-form-label">Departments Allowed</label>
+                        <div class="deptBoxContainer">
+                            <input type="checkbox" id="cseCheckbox" class="department-checkbox" name="departments"
+                                value="CSE">
+                            <label for="cseCheckbox" class="deptBox"><span>CSE</span></label>
+
+                            <input type="checkbox" id="ecCheckbox" class="department-checkbox" name="departments"
+                                value="EC">
+                            <label for="ecCheckbox" class="deptBox"><span>EC</span></label>
+
+                            <input type="checkbox" id="eeeCheckbox" class="department-checkbox" name="departments"
+                                value="EEE">
+                            <label for="eeeCheckbox" class="deptBox"><span>EEE</span></label>
+
+                            <input type="checkbox" id="mechCheckbox" class="department-checkbox" name="departments"
+                                value="Mechanical">
+                            <label for="mechCheckbox" class="deptBox"><span>Mechanical</span></label>
+
+                            <input type="checkbox" id="civilCheckbox" class="department-checkbox" name="departments"
+                                value="Civil">
+                            <label for="civilCheckbox" class="deptBox"><span>Civil</span></label>
+
+                            <input type="checkbox" id="mcaCheckbox" class="department-checkbox" name="departments"
+                                value="MCA">
+                            <label for="mcaCheckbox" class="deptBox"><span>MCA</span></label>
+
+                            <input type="checkbox" id="ftCheckbox" class="department-checkbox" name="departments"
+                                value="FT">
+                            <label for="ftCheckbox" class="deptBox"><span>FT</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details Section -->
+                    <label for="contact" class="formbold-form-label" style="font-size: 16.5px;"> Contact Details</label>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="name1" class="formbold-form-label" style="font-weight: 400;"> Name</label>
+                            <input type="text" name="name1" placeholder="Enter your name" id="name1"
+                                class="formbold-form-input" required />
+                        </div>
+                        <div>
+                            <label for="phonenumber1" class="formbold-form-label" style="font-weight: 400;"> Phone
+                                No.</label>
+                            <input type="tel" name="phonenumber1" placeholder="Enter phone number" id="phonenumber1"
+                                class="formbold-form-input" required />
+                        </div>
+                    </div>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="name2" class="formbold-form-label" style="font-weight: 400;"> Name <span
+                                    style="font-weight: 400;">(Optional)</span></label>
+                            <input type="text" name="name2" placeholder="Enter your name" id="name2"
+                                class="formbold-form-input" />
+                        </div>
+                        <div>
+                            <label for="phonenumber2" class="formbold-form-label" style="font-weight: 400;"> Phone No.
+                                <span style="font-weight: 400;">(Optional)</span></label>
+                            <input type="tel" name="phonenumber2" placeholder="Enter phone number" id="phonenumber2"
+                                class="formbold-form-input" />
+                        </div>
+
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="regFee" class="formbold-form-label"> Registration Fee </label>
+                            <input type="number" name="regFee" placeholder="&#8377;300" id="regFee"
+                                class="formbold-form-input" required />
+                        </div>
+                        <div>
+                            <label for="eventLocation" class="formbold-form-label"> Event Location </label>
+                            <input type="text" name="eventLocation" placeholder="Enter location" id="eventLocation"
+                                class="formbold-form-input" required />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="websiteLink" class="formbold-form-label"> Website Link</label>
+                        <input type="url" name="websiteLink" placeholder="Enter your website link" id="websiteLink"
+                            class="formbold-form-input" required />
+                    </div>
+                </div>
+
+                <div class="formbold-form-btn-wrapper">
+                    <button class="formbold-back-btn">
+                        Back
+                    </button>
+
+                    <button class="formbold-btn" id="nextStepBtn">
+                        Next Step
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1675_1807)">
+                                <path
+                                    d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1675_1807">
+                                    <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+
+                    <button class="formbold-btn" type="submit" id="createEventBtn" style="display: none;">
+                        Create Event
+                        <svg width="0" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg"></svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    // Function to preview the uploaded image
+    function previewImage(event) {
+
+    
+    const input = event.target;
+    if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+
+        console.log(file);
+        reader.onload = function (e) {
+            const img = document.getElementById('thumbnailPreview');
+            const imgBlock = document.getElementById('thumbnailContainer');
+            img.src = e.target.result;
+            imgBlock.style.display = 'flex';
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+    // Function to remove the thumbnail
+    function removeThumbnail(event) {
+    event.preventDefault(); // Prevent default form submission
+    const thumbnailContainer = document.getElementById('thumbnailContainer');
+    if (thumbnailContainer) {
+        thumbnailContainer.style.display = 'none';
+        // Reset the file input
+        const fileInput = document.getElementById('eventThumbnail');
+        if (fileInput) {
+            fileInput.value = '';
+        }
+    }
+}
+
+
+</script>
+
+<script type="module" src="JS/createNewEvent.js"></script>
+<script type="module" src="JS/navbar.js"></script>
+<script src="JS/scrollAndDropdown.js"></script>
+
+</html>

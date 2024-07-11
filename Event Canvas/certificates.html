@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="CSS/certificates.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="border-pattern" id="certificate">
+        <div class="content">
+            <div class="inner-content">
+                <h1>Certificate</h1>
+                <h2>of Excellence</h2>
+                <p>This Certificate Is Proudly Presented To</p>
+                <p id="participantName" class="dynamic-details">Jane Doe</p>
+                <p>Has Completed</p>
+                <p id="eventName" class="dynamic-details">PrintCSS Basics Course</p>
+                <p>On</p>
+                <p id="eventDate" class="dynamic-details">Feburary 5, 2021</p>
+                <p id="cordinator" class="cordinator-details">Coursera</p>
+                <hr id="line">
+                <p class="cordinator-details">Event Co-ordinator</p>
+                <div class="badge">
+                    <img src="Images/certifcatesymbol.jpg" alt="Certification Symbol">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bttoncls">
+        <button id="downloadbtn">
+            Download
+            <div class="arrow-wrapper">
+                <div class="arrow"></div>
+            </div>
+        </button>
+    </div>
+
+    <script type="module" src="JS/fetchCertificateDetails.js"></script>
+</body>
+
+</html>

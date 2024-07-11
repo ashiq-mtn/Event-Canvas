@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Payment</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/Payment.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header" id="navigationPanel">
+        <div class="hdcontainer">
+            <div class="logo">
+                <p><strong>EVENT CANVAS</strong></p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">EVENTS</a></li>
+                    <li><a href="Events/internship.html">INTERNSHIPS</a></li>
+                    <li><a href="Events/collegeFest.html">FEST</a></li>
+                    <li><a href="Events/workshop.html">WORKSHOP</a></li>
+                    <li><a href="certificates.html" id="certificateLink" style="display: none;">CERTIFICATE</a></li>
+                </ul>
+                <div class="buttongrp">
+                    <button class="loginbtn" id="loginbtn" onclick="location.href='Login/login.html';">LOGIN</button>
+                    <button class="eventbtn" id="eventbutton" onclick="location.href='createNewEvent.html';"
+                        style="display: none;">CREATE EVENT</button>
+                    <div class="dropdown" id="profileDropdown" style="display: none;">
+                        <img src="Images/manprofile.png" alt="Account image" id="profilePic" onclick="toggleDropdown()">
+                        <div class="dropdown-content" id="dropdownContent" style="display: none;">
+                            <a href="#" id="signOutButton">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add some space here -->
+    <div class="spacer"></div>
+
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <h1 style="text-align: center;">Registration Form</h1>
+            <div class="event-details">
+                <div class="event-thumbnail">
+                    <img src="Images/1411994283phpznO29H.jpeg" alt="Event Thumbnail" id="eventThumbnail">
+                </div>
+                <div class="event-phrase">
+                    <p style="font-weight: bolder;">Event Name : <span id="eventTitle"></span><p><br>
+                    <p>Date : <span id="eventDate"></span><p><br>
+                    <p>Time : <span id="eventTime"></span><p><br>
+                    <p style="font-weight: bolder;">Registration Fee : <span id="eventFee"></span><p><br>
+                </div>
+            </div>
+            <form id="paymentForm">
+                
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="name" class="formbold-form-label"> Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" class="formbold-form-input" required>
+                    </div>
+                    
+                </div>
+
+                <div class="radio-buttons">
+                    <label for="phone" class="formbold-form-label">Gender</label>
+                    <div class="paymentmethods" style="display: flex;">
+                        <label class="radio-button">
+                            <input type="radio" class="radio-input" name="gender" value="male" required>
+                            <div class="radio-circle"></div>
+                            <span class="radio-label">Male</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" class="radio-input" name="gender" value="female" required>
+                            <div class="radio-circle"></div>
+                            <span class="radio-label">Female</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" class="radio-input" name="gender" value="other" required>
+                            <div class="radio-circle"></div>
+                            <span class="radio-label">Prefer not to say</span>
+                        </label>
+                        
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="phone" class="formbold-form-label">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number" name="phone" class="formbold-form-input" required>
+                    </div>
+                    <div>
+                        <label for="age" class="formbold-form-label">Age</label>
+                        <input type="number" name="age" placeholder="Enter age" id="age" class="formbold-form-input" required/>
+                    </div>  
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="email" class="formbold-form-label">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" name="email" class="formbold-form-input" required>
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="college" class="formbold-form-label">College</label>
+                        <input type="text" id="college" placeholder="Enter your College name and place" name="college" class="formbold-form-input" required>
+                    </div>
+                </div>
+
+                <div class="radio-buttons">
+                    <label for="phone" class="formbold-form-label">Payment Method</label>
+                    <div class="paymentmethods">
+                        <label class="radio-button">
+                            <input type="radio" class="radio-input" name="paymentMethod" value="UPI" required>
+                            <div class="radio-circle"></div>
+                            <span class="radio-label">UPI</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" class="radio-input" name="paymentMethod" value="Paypal" required>
+                            <div class="radio-circle"></div>
+                            <span class="radio-label">Paypal</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" class="radio-input" name="paymentMethod" value="Credit Card" required>
+                            <div class="radio-circle"></div>
+                            <span class="radio-label">Credit Card</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-bottom: 25px; font-weight: 300;" >Please note that all payments are non-refundable.</p>
+
+                <div class="formbold-form-btn-wrapper">
+                    <button class="buyNowbtn" id="buyNowbtn" type="submit">
+                        Buy now
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="JS/navbar.js"></script>
+    <script src="JS/scrollAndDropdown.js"></script>
+    <script type="module" src="JS/payment.js"></script>
+</body>
+
+</html>
