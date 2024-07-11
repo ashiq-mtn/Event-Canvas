@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Login Page</title>
+    
+    <link rel="stylesheet" href="/CSS/loginstyle.css">
+</head>
+
+<body>
+    <div class="mainpagediv" id="mainpagediv">
+        <div class="loginframe">
+            <h2>Login</h2>
+            <h4 style="margin-top: -35px; font-weight: 400;">Stay updated about new events</h4>
+            <form id="loginForm">
+                <div class="loginform">
+
+                    <div class="inputGroup" id="Email">
+                        <input autocomplete="off" required="" type="email" id="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="inputGroup" id="Password">
+                        <input autocomplete="off" required="" type="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+
+                    <button class="loginbtn" type="submit" id="loginbtn" name="loginbtn">Login</button>
+                    <div class="content" style="width: 100%">
+                        <p class="or">or</p>
+                    </div>
+                    <button class="googlebtn" type="button" id="googleSignIn"><i class="fab fa-google"></i> Sign in with Google</button>
+                    <p class="newaccnt" style="text-align: center;">Don't have an account?<a href="signup.html"> Create now</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="imageframe">
+            <button id="homepage-btn" onclick="window.location.href = '/index.html';">Go Back to Homepage</button>
+        </div>
+    </div>
+
+    <script type="module" src="/JS/login.js"></script>
+
+</body>
+
+
+</html>

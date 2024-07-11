@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Registration Page</title>
+
+    <link rel="stylesheet" href="/CSS/signupstyle.css">
+</head>
+
+<body>
+    <div class="mainpagediv" id="mainpagediv">
+        <div class="signupframe">
+
+            <h1>Sign Up</h1>
+            <h4 style="margin-top: -15px; font-weight: 500;">Create your account</h4>
+            <div class="optionSelect">
+                <div class="userbox" id="studentBox">
+                    <input type="radio" id="student" name="userType" value="student" checked>
+                    <label for="student">Student</label><br>
+                </div>
+                <div class="userbox" id="collegeBox">
+                    <input type="radio" id="college" name="userType" value="college">
+                    <label for="college">College</label><br>
+                </div>
+                <div class="userbox" id="companyBox">
+                    <input type="radio" id="company" name="userType" value="company">
+                    <label for="company">Organization</label>
+                </div>
+            </div>
+
+            <form id="signupForm">
+                <div class="signupform">
+
+                    <!-- Student Fields -->
+                    <div id="student-fields">
+                        <div class="inputGroup" id="student-name">
+                            <input autocomplete="off" required="" type="text" id="studentName">
+                            <label for="studentName">Name</label>
+                        </div>
+                        <div class="inputGroup" id="student-email">
+                            <input autocomplete="off" required="" type="email" id="studentMail">
+                            <label for="studentMail">Email</label>
+                        </div>
+                        <div class="inputGroup" id="student-password">
+                            <input autocomplete="off" required="" type="password" id="studentPassword">
+                            <label for="studentPassword">Password</label>
+                        </div>
+
+                    </div>
+
+                    <!-- Organization Fields -->
+                    <div id="organization-fields" style="display: none;">
+                        <div class="inputGroup" id="organization-name">
+                            <input autocomplete="off" required="" type="text" id="institutionName">
+                            <label for="institutionName">Institution Name</label>
+                        </div>
+                        <div class="inputGroup" id="organization-website">
+                            <input autocomplete="off" required="" type="text" id="website">
+                            <label for="website">Website</label>
+                        </div>
+                        <div class="inputGroup" id="organization-email">
+                            <input autocomplete="off" required="" type="email" id="organizationMail">
+                            <label for="organizationMail">Email</label>
+                        </div>
+                        <div class="inputGroup" id="organization-password">
+                            <input autocomplete="off" required="" type="password" id="organizationPassword">
+                            <label for="organizationPassword">Password</label>
+                        </div>
+
+                    </div>
+
+                    <button class="signupbtn" id="signUp" type="submit">Register</button>
+                    <p class="oldaccnt" style="text-align: center; margin: 0;">Already have an account?<a href="login.html" style="margin-left: 5px;">Log In</a></p>
+
+                    <div class="content" style="width: 100%">
+                        <p class="or">or</p>
+                    </div>
+                    <button class="googlebtn" id="googleButton" type="button"><i class="fab fa-google"></i> Sign up with Google</button>
+
+                    <p class="acceptterms"
+                        style="font-size:.89rem; width: 90%;align-self: center; color: gray;margin: 0; margin-left: 2rem;">
+                        By signing up to create an account I accept Company's
+                        <span style="color: #0069F0;cursor: pointer;">Terms of Use and Privacy Policy. </span>
+                    </p>
+
+                </div>
+
+            </form>
+        </div>
+        <div class="imageframe">
+            <button id="homepage-btn" onclick="window.location.href = '/index.html';">Go Back to Homepage</button>
+        </div>
+    </div>
+
+    <script type="module" src="/JS/signup.js"></script>
+
+</body>
+
+</html>
