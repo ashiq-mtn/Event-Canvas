@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/loading-animation.css">
+
+</head>
+
+<body>
+
+    <!-- Loading animation -->
+    <div id="loadingAnimation">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <div id="displayHomePage" style="display: none;">
+        <!-- Header Section -->
+        <header class="header" id="navigationPanel">
+            <div class="hdcontainer">
+                <div class="logo">
+                    <p><strong>EVENT CANVAS</strong></p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="#">EVENTS</a></li>
+                        <li><a href="internship.html">INTERNSHIPS</a></li>
+                        <li><a href="#">FEST</a></li>
+                        <li><a href="workshop.html">WORKSHOP</a></li>
+                        <li><a href="/certificates.html" id="certificateLink" style="display: none;">CERTIFICATE</a>
+                        </li>
+                    </ul>
+                    <div class="buttongrp">
+                        <button class="loginbtn" id="loginbtn"
+                            onclick="location.href='/Login/login.html';">LOGIN</button>
+                        <button class="eventbtn" id="eventbutton" onclick="location.href='/createnewEvent.html';"
+                            style="display: none;">CREATE
+                            EVENT</button>
+                        <div class="dropdown" id="profileDropdown" style="display: none;">
+                            <img src="/Images/manprofile.png" alt="Account image" id="profilePic"
+                                onclick="toggleDropdown()">
+                            <div class="dropdown-content" id="dropdownContent" style="display: none;">
+                                <a href="#" id="signOutButton">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Introduction Picture -->
+        <div class="introduction-image" id="intro-picture">
+            <img src="/Images/festival.avif" alt="Event Introduction Picture" class="event-image">
+            <div class="introduction-caption">
+                <h1>COLLEGE FEST</h1>
+                <p>Dive into the College Fest Experience</p>
+            </div>
+        </div>
+
+        <!-- Sub Events Section -->
+        <section class="event-details">
+            <div class="container">
+                <div class="sub-events">
+                    <!-- <h3>Events</h3>
+                <div class="sub-event">
+                    <img src="Images/cover-image-1-scaled.webp" alt="Sub Event 2 Image" class="sub-event-image">
+                    <div class="sub-event-content" onclick="redirectToEventDetails('Dhanak 2024');">
+                        <div class="card-body"></div>
+                        <h5>Dhanak 2024</h5>
+                        <p>Get ready to ignite the stage at Saintgits's Fest 2024!</p>
+                        <p><strong>Date and Time:</strong> January 1, 2025 - 2:00 PM to 4:00 PM</p>
+                        <p><strong>Location:</strong> Example Location, City, Country</p>
+                        <p><strong>Registration Fee:</strong>&#x20B9; 40 </p>
+                        <a href="#" class="btn btn-primary" style="float: right;">View Details</a>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-us">
+                            <h4>About Us</h4>
+                            <p>Event Canvas will serve as an Event Management System (EMS) tailored specifically for
+                                engineering students in Kerala. The platform aims to streamline event discovery,
+                                registration, participation, and certificate downloads for students, while providing
+                                event
+                                creation and management tools for colleges and organizations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/index.html">Events</a></li>
+                                <li><a href="internship.html">Internships</a></li>
+                                <li><a href="#">Fest</a></li>
+                                <!-- <li><a href="#">Certificate</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="/JS/navbar.js"></script>
+    <script type="module" src="/JS/loadAnimation.js"></script>
+    <script type="module" src="/JS/collegeFest.js"></script>
+    <script src="/JS/scrollAndDropdown.js"></script>
+
+</body>
+
+</html>

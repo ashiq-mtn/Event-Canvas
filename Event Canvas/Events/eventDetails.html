@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/af4bb70b7f.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/eventDetails.css">
+
+    <title>Event Details</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header" id="navigationPanel">
+        <div class="hdcontainer">
+            <div class="logo">
+                <p><strong>EVENT CANVAS</strong></p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/index.html">EVENTS</a></li>
+                    <li><a href="/Events/internship.html">INTERNSHIPS</a></li>
+                    <li><a href="/Events/collegeFest.html">FEST</a></li>
+                    <li><a href="/Events/workshop.html">WORKSHOP</a></li>
+                    <li><a href="/certificates.html" id="certificateLink" style="display: none;">CERTIFICATE</a></li>
+                </ul>
+                <div class="buttongrp">
+                    <button class="loginbtn" id="loginbtn" onclick="location.href='/Login/login.html';">LOGIN</button>
+                    <button class="eventbtn" id="eventbutton" onclick="location.href='/createNewEvent.html';"
+                        style="display: none;">CREATE EVENT</button>
+                    <div class="dropdown" id="profileDropdown" style="display: none;">
+                        <img src="/Images/manprofile.png" alt="Account image" id="profilePic"
+                            onclick="toggleDropdown()">
+                        <div class="dropdown-content" id="dropdownContent" style="display: none;">
+                            <a href="#" id="signOutButton">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" id="eventContainer">
+        <!-- Content will be replaced by JavaScript -->
+    </div>
+    <div class="floating-div" id="floatingDiv">
+        <!-- Content will be replaced by JavaScript -->
+    </div>
+
+    <script type="module" src="/JS/navbar.js"></script>
+    <script type="module" src="/JS/eventDetails.js"></script>
+    <script src="/JS/scrollAndDropdown.js"></script>
+</body>
+
+</html>

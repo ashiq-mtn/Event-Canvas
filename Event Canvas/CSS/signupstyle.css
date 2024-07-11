@@ -1,0 +1,222 @@
+html,body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
+
+    font-family: "Montserrat", sans-serif;
+    background-color: #5f029c;
+}
+
+.mainpagediv  {
+    width: 1100px;
+    height: 750px;
+    display: flex;
+}
+
+.signupframe {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.imageframe {
+    width: 60%;
+    background-image: url(/Images/milad-fakurian-CN2FEPXERRI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Select User Type Styles */
+h1,h4 {
+    margin: 0;
+}
+
+.optionSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.userbox {
+    width: 7rem;
+    border: 2px solid #5f22d9f6;
+    padding: 1.2rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#companyBox {
+    padding: 1.2rem 1.2rem;
+    display: flex;  
+    justify-content: center;
+    gap: 5px;
+}
+
+.userbox:hover {
+    background-color: #f2f2f2;
+}
+
+.userbox input[type="radio"]:checked+label {
+    font-weight: bold;
+}
+
+.signupform {
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input Style */
+
+.inputGroup {
+    width: 38vh;
+    position: relative;
+}
+
+.inputGroup input {
+    font-family: "Montserrat", sans-serif;
+    font-size: 600;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.inputGroup label {
+    font-size: .91rem;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-55%);
+    padding: 0 0.8rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+
+.inputGroup input:focus + label,.inputGroup input:valid + label {
+    font-size: 80%;
+    top: 0;
+    left: .9rem;
+    transform: translateY(-50%) scale(1);
+    background-color: #ffffff;
+}
+
+.inputGroup input:focus,.inputGroup input:valid {
+    border-color: rgb(150, 150, 200);
+} 
+/* Signup & Home Button Styles */
+
+button {
+    padding: 11px 0px;
+    border: none;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signupbtn {
+    background-color: #5F22D9;
+    color: white;
+}
+
+.googlebtn {
+    margin-top: -20px;
+    background-color: transparent;
+    color: rgb(95, 34, 217);
+    border: .5px solid rgb(95, 34, 217);
+    font-weight: 500;
+    transition: color,background-color .5s;
+}
+
+.googlebtn i {
+    color: #9A00EE;
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.googlebtn:hover {
+    background-color: rgb(95, 34, 217);
+    color: rgb(240, 240, 240);
+}
+
+.googlebtn:hover i {
+    color: rgb(240, 240, 240);
+}
+
+.oldaccnt a {
+    color: #5F22D9;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.or {
+    color: black;
+    text-align: center;
+    font-size: .90rem;
+    background:
+      linear-gradient(rgb(128, 128, 128) 0 0) left,
+      linear-gradient(rgb(128, 128, 128) 0 0) right;
+    background-size: 43% 1px;
+    background-repeat: no-repeat;
+}
+
+
+
+#student-fields,#organization-fields {
+    display: flex;
+    flex-direction: column;
+}
+#organization-fields {
+    gap: 1rem; 
+}
+
+#student-fields .inputGroup {
+    font-family: "Montserrat", sans-serif;
+    width: 38vh;
+    position: relative;
+    margin-bottom: 1rem; /* Add margin bottom for spacing */
+}
+
+
+
+.imageframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#homepage-btn {
+    position: absolute;
+    bottom: 12.5rem; 
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 13px 18px;
+}
+
+#homepage-btn:hover {
+    background-color: rgba(0, 0, 0, 0.342);
+}
+

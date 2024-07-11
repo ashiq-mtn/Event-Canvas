@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: rgba(99, 99, 99, 0.342);
+    padding: .8rem 0;
+}
+
+.spacer {
+    height: 50px;
+}
+
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-input-flex {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 12px;
+}
+
+.formbold-input-flex > div {
+    flex: 1; /* Distribute space evenly among flex items */
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 8px 12px; /* Adjust padding as needed */
+    border-radius: 5px;
+    border: 1px solid #DDE3EC;
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #536387;
+    outline: none;
+    resize: none;
+}
+
+.formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-form-label {
+    color: #07074D;
+    font-weight: 550;
+    font-size: 14.5px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formbold-form-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buyNowbtn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.buyNowbtn:hover {
+    background-color: #5652d9;
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.event-thumbnail {
+    width: 300px;
+    height: 250px;
+}
+
+.event-details img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-input {
+    opacity: 0; /* Hide the actual radio input */
+    position: absolute;
+}
+
+.radio-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    position: relative;
+    margin-right: 10px;
+}
+
+.radio-circle::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-input:checked + .radio-circle::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-input:checked + .radio-circle::before {
+    background-color: #ddd;
+}
+
+.radio-input:checked + .radio-circle:nth-of-type(1)::before {
+    background-color: #ff6600;
+}
+
+.radio-input:checked + .radio-circle:nth-of-type(2)::before {
+    background-color: #ffffff;
+}
+
+.radio-input:checked + .radio-circle:nth-of-type(3)::before {
+    background-color: #26be00;
+}
+
+.radio-label {
+    color: black;
+}
+
+.radio-circle:hover {
+    border-color: #555;
+}
+
+.radio-input:hover:checked + .radio-circle::before {
+    background-color: #555;
+}
+
+.paymentmethods {
+    /* display: flex; */
+    margin-bottom: 10px;
+}
+
+.paymentmethods .radio-button {
+    margin-right: 50px; /* Adjust spacing between radio buttons as needed */
+}

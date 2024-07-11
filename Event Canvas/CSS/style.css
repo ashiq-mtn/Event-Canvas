@@ -1,0 +1,813 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    animation: fade-in .5s;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hdcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0 2rem;
+}
+
+/* Header Styles */
+header {
+    background-color: transparent;
+    color: #fffcf2;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Scroll Animation for header when scrolling down */
+#navigationPanel {
+    transition: all 0.3s ease;
+}
+
+#navigationPanel.scrolled {
+    background-color: rgba(0, 0, 0, 0.342);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 2rem;
+}
+
+.logo img {
+    width: 40%;
+    filter: brightness(100);
+}
+
+.logo p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.profilepic:hover {
+    background-color: #000;
+}
+
+.buttongrp img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fffcf2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #eb5e28;
+}
+
+.buttongrp {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.loginbtn,
+.eventbtn {
+    background-color: #eb5e28;
+    color: #fffcf2;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.loginbtn {
+    border: 1px solid #eb5e28;
+}
+
+.loginbtn:hover {
+    background-color: rgba(0, 0, 0, 0.247);
+    border: 1px solid white;
+}
+
+.loginbtn a {
+    text-decoration: none;
+    color: #fffcf2;
+}
+
+.eventbtn {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.eventbtn a {
+    color: white;
+    text-decoration: none;
+}
+
+.eventbtn:hover {
+    background-color: #eb5e28;
+    border-color: #eb5e28;
+
+}
+
+.eventbtn a:hover {
+    color: white;
+}
+
+/* Profile Pic styles */
+.dropdown {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.dropdown img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.dropdown img:hover {
+    filter: drop-shadow(0px 0px 4px #ffffff);
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    top: 60px;
+    right: -25px;
+    width: 6rem;
+    height: 3rem;
+}
+
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: calc(50% - 10px);
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+#signOutButton {
+    display: block;
+    margin-top: 4px;
+    width: 100%;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+
+#signOutButton:hover {
+    background-color: rgb(196, 195, 195);
+    color: white;
+}
+
+/* Introduction Section Styles */
+.introduction {
+    background: url(/Images/milad-fakurian-CN2FEPXERRI-unsplash.jpg) no-repeat center center/cover;
+    color: #fff;
+    padding: 11rem 0;
+    text-align: center;
+}
+
+.introduction .container h1 {
+    font-size: 3.5rem;
+}
+
+.introduction .container p {
+    font-size: 1.3rem;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+.searchTerm {
+    width: 100%;
+    border: none;
+    border-right: none;
+    padding: 1rem 2rem;
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: #000;
+}
+
+.searchButton {
+    width: 8rem;
+    height: 50px;
+    border: 1px solid #EB5E28;
+    background: #EB5E28;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Event Details*/
+.introduction-image {
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.introduction-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.introduction-caption h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.introduction-caption p {
+    font-size: 1.2rem;
+}
+
+/* Sample Event Cards Section Styles */
+.event-cards {
+    margin-top: 50px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/*Card style*/
+.event-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.event-card .card-body {
+    padding: 20px;
+}
+
+.event-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.event-card .btn {
+    width: 80%;
+    /* Add this line to center the button horizontally */
+    margin: 0 auto;
+    /* Add this line to make the button a block element */
+    display: block;
+    background-color: #610000;
+    border: none;
+}
+
+/*Remaining*/
+.event-card {
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: box-shadow .3s;
+}
+
+.event-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-card .card-body {
+    padding: 20px;
+}
+
+.event-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.event-card .card-text {
+    margin-top: 10px;
+}
+
+/* Event Categories Section Styles */
+.event-categories {
+    margin-top: 50px;
+}
+
+.category-card {
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow .3s, transform 0.3s;
+}
+
+.category-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.category-card .card-body {
+    padding: 20px;
+}
+
+.category-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.category-card .card-text {
+    margin-top: 10px;
+}
+
+.category-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card .btn {
+    width: 80%;
+    /* Add this line to center the button horizontally */
+    margin: 0 auto;
+    /* Add this line to make the button a block element */
+    display: block;
+    background-color: #7902c9;
+    border: none;
+}
+
+
+/* Footer Styles */
+
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 4rem 0;
+    margin-top: 5rem;
+}
+
+.footer h4 {
+    color: #eb5e28;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #eb5e28;
+}
+
+/* Event Details Section Styles */
+.event-details {
+    padding: 50px 0;
+}
+
+.event-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 0 65%;
+    margin-bottom: 30px;
+}
+
+.event-info {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.event-info h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.event-info p {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.event-info strong {
+    color: #343a40;
+}
+
+.register-button {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+/* Sub Events Section Styles */
+.sub-events {
+    margin-top: 50px;
+}
+
+.sub-event {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.sub-event-image {
+    width: 15rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.sub-event-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.sub-event-content h5 {
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.sub-event-content p {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+/* You May Also Like Section Styles */
+.you-may-also-like {
+    margin-top: 50px;
+}
+
+.event-card {
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card .card-body {
+    padding: 20px;
+}
+
+.event-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.event-card .card-text {
+    margin-top: 10px;
+}
+
+/* Create Event page styles */
+
+.create-event {
+    padding: 50px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(450vh - 190rem);
+}
+
+.create-event h1 {
+    margin-bottom: 30px;
+}
+
+.create-event form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.create-event .form-group {
+    margin-bottom: 20px;
+}
+
+.create-event label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.create-event input[type="text"],
+.create-event input[type="date"],
+.create-event input[type="number"],
+.create-event textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.create-event textarea {
+    height: 150px;
+}
+
+.create-event button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #eb5e28;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.create-event button[type="submit"]:hover {
+    background-color: #c24a1f;
+}
+
+/* CSS for the down arrow button */
+.form-group {
+    position: relative;
+}
+
+.date-group {
+    display: flex;
+    justify-content: center;
+}
+
+.date-group .form-group {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.time-group {
+    display: flex;
+    justify-content: center;
+}
+
+.time-group .form-group {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.time-group .form-group input {
+    width: 100%;
+    padding: .5rem 1rem;
+}
+
+.form-group select {
+    padding-right: 30px;
+}
+
+#eventcategory::after {
+    content: "\25BC";
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.file-input-wrapper {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    top: .4rem;
+    right: 0;
+    bottom: 0;
+    left: .8rem;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* View Details Button Style */
+#listEventCard {
+    position: relative;
+}
+
+#viewDetailsBtn {
+    position: absolute;
+    top: 81%;
+    right: 20px;
+}
+
+
+/* Search Bar Styles */
+.search-results {
+    position: absolute;
+    top: 23.1rem;
+    left: 21.5rem;
+    height: auto;
+    width: 57%;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.eventBox {
+    max-height: 4rem;
+    width: 100%;
+    border-bottom: .5px solid rgb(199, 199, 199);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    cursor: pointer;
+}
+
+.eventBox:hover {
+    background-color: rgba(236, 234, 234, 0.445);
+}
+
+.eventBox img {
+    max-width: 5%;
+    height: 2rem;
+    margin-left: 10px;
+}
+
+.event-Title {
+    color: black;
+    font-size: 1.2rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+.event-Title:hover {
+    color: #A300ED;
+}
+
+#eventType {
+    margin: 0;
+    font-size: 1rem;
+    /* Apply text transformation */
+    text-transform: none;
+    background-color: #A300ED;
+    padding: 2px 10px;
+    border-radius: 50px;
+}
+
+/* No events message styling */
+.no-events-message {
+    text-align: center;
+    color: #333333;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.line1 {
+    color: #333; 
+    font-size: 1.5rem;
+    font-weight: bold; 
+}
+
+.line2 {
+    color: #666;
+    font-size: 1.3rem;
+}
+
+
+.delete-event-btn {
+    background-color: red;
+    border: none;
+    padding: 6px 12px;
+    color: #fffcf2;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin: 0;
+
+    position: absolute;
+    top: 150px;
+    right: 9px;
+}
+
+.delete-event-btn:hover {
+    background-color: rgb(134, 0, 0);
+}
+
+.myevent-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 0 25%;
+    margin-bottom: 30px;
+}
