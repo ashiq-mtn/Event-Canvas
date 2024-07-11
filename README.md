@@ -13,7 +13,7 @@ Event Canvas is a web application designed to streamline event management for en
 
 ## Technologies Used
 
-- **Backend**: Firebase
+- **Backend**: Node.js, Firebase
 - **Frontend**: HTML, CSS, JavaScript
 
 ## Installation
@@ -25,6 +25,7 @@ Event Canvas is a web application designed to streamline event management for en
     ```
 
 2. **Install the dependencies**
+    ```bash
     npm install
     ```
 
@@ -33,6 +34,7 @@ Event Canvas is a web application designed to streamline event management for en
     - Add your Firebase configuration to `src/firebaseConfig.js`.
 
 4. **Run the application**
+    ```bash
     npm start
     ```
 
@@ -71,3 +73,6 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 For any questions or suggestions, feel free to open an issue or contact [your-email@example.com].
 
+---
+
+Thank you for using Event Canvas!
