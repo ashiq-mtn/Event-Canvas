@@ -20,7 +20,7 @@ Event Canvas is a static web application designed to streamline event management
 
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/your-username/Event-Canvas.git
+    git clone https://github.com/ashiq-mtn/Event-Canvas.git
     cd Event-Canvas
     ```
 2. **Configure Firebase**
